@@ -8,7 +8,7 @@ const input = document.getElementById("startInput");
 input.addEventListener("keyup", function(start) {
     if (event.keyCode === 13)
         event.preventDefault();
-}
+};
 
 //This is for later in the game so JS doesn't think you equipped the paintball gun
     let pbEquipped = false;
@@ -16,7 +16,7 @@ input.addEventListener("keyup", function(start) {
 const death = function(cause) {
 console.log(cause);
 console.log("\nGame over. Try again?\n");
-}
+};
 
 //Player Spawn Point
 const start = function() {
@@ -38,14 +38,14 @@ else {
   console.log("Sorry, I didn't quite understand that.");
   return start();
 }
-}
+};
 
 // Choke scene
 const foodChoke = function() {
 console.log("\nYou begin eating the pancake.");
 console.log("The syrup allows it to slide down your throat and goes down your windpipe.");
 return death("\nYou choked to death. All because you didn't cut the pieces small enough.");
-}
+};
 
 //News scene
 const newsRoom = function() {
@@ -74,12 +74,12 @@ else {
   console.log("Sorry, I didn't quite understand that.");
   return newsRoom();
 }
-}
+};
 
 //Normal Day scene
 const normalRoom = function() {
 return death("\nYou go about your day as usual, until zombies break into your house and eat you alive.");
-}
+};
 
 //Weapon scene
 const weaponRoom = function() {
@@ -115,7 +115,7 @@ console.log("\nYou find a Baseball Bat, Survival Knife, Paintball Marker, and th
   console.log("Sorry, I didn't quite understand that.");
   return (weaponRoom);
 }
-}
+};
 
 //Fight scene
 const fightRoom = function() {
@@ -133,13 +133,13 @@ console.log("\nBAM! A zomie just broke down your front door.");
     console.log("\nYou use your weapon of choice to bring the zombie down.");
     return carRoom();
   }
-  }
   if (pbEquipped == true && choice === "fight it") {
     console.log("\nYou shot the zombie, but that hardly slowed him down. You shouldn't have picked something non-lethal.");
   }
   else {
   console.log("You got confused and the zombie bit you.");
   }
+};
 
 //Car scene
 const carRoom = function() {
@@ -163,7 +163,7 @@ const choice = prompt("\nWhere will you go? City, Military Base, or Rural?");
     console.log("\nThey confiscate whatever weapon you brought with you and place you under arrest.");
     return enlistmentRoom();
   }
-}
+};
 
 //Enlistment scene
 const enlistmentRoom = function() {
@@ -182,7 +182,7 @@ if (choice === "face punishment") {
   console.log("\nYou go to prison for your crime, and the virus spreads to the prison you are in. You are one of the victims.");
   return death();
 }
-}
+};
 
 //Robbery scene
 const robberyRoom = function() {
@@ -201,7 +201,7 @@ const choice = prompt("\nWill you let them take your stuff or will you fight?");
     console.log("\nAlthough you survived with multiple injuries, you got a doctor to treat you.");
     return afterRoom();
   }
-}
+};
 
 //Aftermath scene
 const afterRoom = function() {
@@ -223,7 +223,7 @@ if (choice === "go back to fight") {
   console.log("\nCongratulations! You have won... Kind of.");
   console.log("\Even though you died, you got: the Selfless Ending");
 }
-}
+};
 
 //Thank you for playing. I worked and thought very hard about this.
 
